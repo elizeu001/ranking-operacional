@@ -10,18 +10,6 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ranking Operacional</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
       font-family: Arial, sans-serif;
     }
 
@@ -151,6 +139,7 @@
   </header>
 
   <div class="cards">
+
     <div class="card">
       <span>Equipes</span>
       <strong>6</strong>
@@ -170,6 +159,7 @@
       <span>Retrabalhos</span>
       <strong>0</strong>
     </div>
+
   </div>
 
   <div class="ranking">
@@ -178,317 +168,55 @@
 
     <div class="item primeiro">
       <div class="posicao">🥇</div>
-
       <div>
         <div class="equipe">Marcelo e Julio</div>
-        <div class="indicadores">
-          SLA: 0% • Retrabalho: 0 • OS: 0
-        </div>
+        <div class="indicadores">SLA: 0% • Retrabalho: 0 • OS: 0</div>
       </div>
-
       <div class="pontos">0 pts</div>
     </div>
 
     <div class="item">
       <div class="posicao">🥈</div>
-
       <div>
         <div class="equipe">Manoel e Roanderson</div>
-        <div class="indicadores">
-          SLA: 0% • Retrabalho: 0 • OS: 0
-        </div>
+        <div class="indicadores">SLA: 0% • Retrabalho: 0 • OS: 0</div>
       </div>
-
       <div class="pontos">0 pts</div>
     </div>
 
     <div class="item">
       <div class="posicao">🥉</div>
-
       <div>
         <div class="equipe">Vinicius e Luis Otavio</div>
-        <div class="indicadores">
-          SLA: 0% • Retrabalho: 0 • OS: 0
-        </div>
+        <div class="indicadores">SLA: 0% • Retrabalho: 0 • OS: 0</div>
       </div>
-
       <div class="pontos">0 pts</div>
     </div>
 
     <div class="item">
       <div class="posicao">4º</div>
-
       <div>
         <div class="equipe">Phelipe e Vitor</div>
-        <div class="indicadores">
-          SLA: 0% • Retrabalho: 0 • OS: 0
-        </div>
+        <div class="indicadores">SLA: 0% • Retrabalho: 0 • OS: 0</div>
       </div>
-
       <div class="pontos">0 pts</div>
     </div>
 
     <div class="item">
       <div class="posicao">5º</div>
-
       <div>
         <div class="equipe">Kaleb e Welligton</div>
-        <div class="indicadores">
-          SLA: 0% • Retrabalho: 0 • OS: 0
-        </div>
+        <div class="indicadores">SLA: 0% • Retrabalho: 0 • OS: 0</div>
       </div>
-
       <div class="pontos">0 pts</div>
     </div>
 
     <div class="item">
       <div class="posicao">6º</div>
-
       <div>
         <div class="equipe">William e Lucas</div>
-        <div class="indicadores">
-          SLA: 0% • Retrabalho: 0 • OS: 0
-        </div>
+        <div class="indicadores">SLA: 0% • Retrabalho: 0 • OS: 0</div>
       </div>
-
-      <div class="pontos">0 pts</div>
-    </div>
-
-  </div>
-
-</div>
-
-</body>
-</html>
-
-    }
-
-    body {
-      background: #f3f4f6;
-      color: #111827;
-      padding: 20px;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    header {
-      background: #111827;
-      color: white;
-      padding: 25px;
-      border-radius: 15px;
-      margin-bottom: 20px;
-    }
-
-    header h1 {
-      font-size: 28px;
-      margin-bottom: 8px;
-    }
-
-    header p {
-      color: #d1d5db;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
-      margin-bottom: 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-
-    .card span {
-      color: #6b7280;
-      font-size: 14px;
-    }
-
-    .card strong {
-      display: block;
-      font-size: 28px;
-      margin-top: 8px;
-    }
-
-    .ranking {
-      background: white;
-      border-radius: 15px;
-      padding: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-
-    .ranking h2 {
-      margin-bottom: 15px;
-    }
-
-    .item {
-      display: grid;
-      grid-template-columns: 60px 1fr 120px;
-      align-items: center;
-      gap: 15px;
-      padding: 15px;
-      border-bottom: 1px solid #e5e7eb;
-    }
-
-    .posicao {
-      font-size: 24px;
-      font-weight: bold;
-      text-align: center;
-    }
-
-    .equipe {
-      font-weight: bold;
-    }
-
-    .indicadores {
-      color: #6b7280;
-      font-size: 13px;
-      margin-top: 5px;
-    }
-
-    .pontos {
-      text-align: right;
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    .primeiro {
-      background: #fff7d6;
-      border-radius: 10px;
-    }
-
-    @media (max-width: 700px) {
-      .cards {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .item {
-        grid-template-columns: 45px 1fr 80px;
-      }
-
-      .pontos {
-        font-size: 17px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-<div class="container">
-
-  <header>
-    <h1>🏆 Ranking Operacional</h1>
-    <p>Acompanhamento de desempenho das equipes</p>
-  </header>
-
-  <div class="cards">
-    <div class="card">
-      <span>Equipes</span>
-      <strong>6</strong>
-    </div>
-
-    <div class="card">
-      <span>OS realizadas</span>
-      <strong>0</strong>
-    </div>
-
-    <div class="card">
-      <span>SLA</span>
-      <strong>0%</strong>
-    </div>
-
-    <div class="card">
-      <span>Retrabalhos</span>
-      <strong>0</strong>
-    </div>
-  </div>
-
-  <div class="ranking">
-
-    <h2>Ranking das equipes</h2>
-
-    <div class="item primeiro">
-      <div class="posicao">🥇</div>
-
-      <div>
-        <div class="equipe">Marcelo e Julio</div>
-        <div class="indicadores">
-          SLA: 0% • Retrabalho: 0 • OS: 0
-        </div>
-      </div>
-
-      <div class="pontos">0 pts</div>
-    </div>
-
-    <div class="item">
-      <div class="posicao">🥈</div>
-
-      <div>
-        <div class="equipe">Manoel e Roanderson</div>
-        <div class="indicadores">
-          SLA: 0% • Retrabalho: 0 • OS: 0
-        </div>
-      </div>
-
-      <div class="pontos">0 pts</div>
-    </div>
-
-    <div class="item">
-      <div class="posicao">🥉</div>
-
-      <div>
-        <div class="equipe">Vinicius e Luis Otavio</div>
-        <div class="indicadores">
-          SLA: 0% • Retrabalho: 0 • OS: 0
-        </div>
-      </div>
-
-      <div class="pontos">0 pts</div>
-    </div>
-
-    <div class="item">
-      <div class="posicao">4º</div>
-
-      <div>
-        <div class="equipe">Phelipe e Vitor</div>
-        <div class="indicadores">
-          SLA: 0% • Retrabalho: 0 • OS: 0
-        </div>
-      </div>
-
-      <div class="pontos">0 pts</div>
-    </div>
-
-    <div class="item">
-      <div class="posicao">5º</div>
-
-      <div>
-        <div class="equipe">Kaleb e Welligton</div>
-        <div class="indicadores">
-          SLA: 0% • Retrabalho: 0 • OS: 0
-        </div>
-      </div>
-
-      <div class="pontos">0 pts</div>
-    </div>
-
-    <div class="item">
-      <div class="posicao">6º</div>
-
-      <div>
-        <div class="equipe">William e Lucas</div>
-        <div class="indicadores">
-          SLA: 0% • Retrabalho: 0 • OS: 0
-        </div>
-      </div>
-
       <div class="pontos">0 pts</div>
     </div>
 
