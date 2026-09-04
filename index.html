@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -127,6 +128,7 @@
       }
     }
   </style>
+
 </head>
 
 <body>
@@ -140,89 +142,134 @@
 
   <div class="cards">
 
-    <div class="card">
-      <span>Equipes</span>
-      <strong>6</strong>
-    </div>
+```
+<div class="card">
+  <span>Equipes</span>
+  <strong>6</strong>
+</div>
 
-    <div class="card">
-      <span>OS realizadas</span>
-      <strong>0</strong>
-    </div>
+<div class="card">
+  <span>OS realizadas</span>
+  <strong id="totalOS">Carregando...</strong>
+</div>
 
-    <div class="card">
-      <span>SLA</span>
-      <strong>0%</strong>
-    </div>
+<div class="card">
+  <span>SLA</span>
+  <strong>0%</strong>
+</div>
 
-    <div class="card">
-      <span>Retrabalhos</span>
-      <strong>0</strong>
-    </div>
+<div class="card">
+  <span>Retrabalhos</span>
+  <strong>0</strong>
+</div>
+```
 
   </div>
 
   <div class="ranking">
 
-    <h2>Ranking das equipes</h2>
+```
+<h2>Ranking das equipes</h2>
 
-    <div class="item primeiro">
-      <div class="posicao">🥇</div>
-      <div>
-        <div class="equipe">Marcelo e Julio</div>
-        <div class="indicadores">SLA: 0% • Retrabalho: 0 • OS: 0</div>
-      </div>
-      <div class="pontos">0 pts</div>
-    </div>
+<div class="item primeiro">
+  <div class="posicao">🥇</div>
+  <div>
+    <div class="equipe">Marcelo e Julio</div>
+    <div class="indicadores">SLA: 0% • Retrabalho: 0 • OS: 0</div>
+  </div>
+  <div class="pontos">0 pts</div>
+</div>
 
-    <div class="item">
-      <div class="posicao">🥈</div>
-      <div>
-        <div class="equipe">Manoel e Roanderson</div>
-        <div class="indicadores">SLA: 0% • Retrabalho: 0 • OS: 0</div>
-      </div>
-      <div class="pontos">0 pts</div>
-    </div>
+<div class="item">
+  <div class="posicao">🥈</div>
+  <div>
+    <div class="equipe">Manoel e Roanderson</div>
+    <div class="indicadores">SLA: 0% • Retrabalho: 0 • OS: 0</div>
+  </div>
+  <div class="pontos">0 pts</div>
+</div>
 
-    <div class="item">
-      <div class="posicao">🥉</div>
-      <div>
-        <div class="equipe">Vinicius e Luis Otavio</div>
-        <div class="indicadores">SLA: 0% • Retrabalho: 0 • OS: 0</div>
-      </div>
-      <div class="pontos">0 pts</div>
-    </div>
+<div class="item">
+  <div class="posicao">🥉</div>
+  <div>
+    <div class="equipe">Vinicius e Luis Otavio</div>
+    <div class="indicadores">SLA: 0% • Retrabalho: 0 • OS: 0</div>
+  </div>
+  <div class="pontos">0 pts</div>
+</div>
 
-    <div class="item">
-      <div class="posicao">4º</div>
-      <div>
-        <div class="equipe">Phelipe e Vitor</div>
-        <div class="indicadores">SLA: 0% • Retrabalho: 0 • OS: 0</div>
-      </div>
-      <div class="pontos">0 pts</div>
-    </div>
+<div class="item">
+  <div class="posicao">4º</div>
+  <div>
+    <div class="equipe">Phelipe e Vitor</div>
+    <div class="indicadores">SLA: 0% • Retrabalho: 0 • OS: 0</div>
+  </div>
+  <div class="pontos">0 pts</div>
+</div>
 
-    <div class="item">
-      <div class="posicao">5º</div>
-      <div>
-        <div class="equipe">Kaleb e Welligton</div>
-        <div class="indicadores">SLA: 0% • Retrabalho: 0 • OS: 0</div>
-      </div>
-      <div class="pontos">0 pts</div>
-    </div>
+<div class="item">
+  <div class="posicao">5º</div>
+  <div>
+    <div class="equipe">Kaleb e Welligton</div>
+    <div class="indicadores">SLA: 0% • Retrabalho: 0 • OS: 0</div>
+  </div>
+  <div class="pontos">0 pts</div>
+</div>
 
-    <div class="item">
-      <div class="posicao">6º</div>
-      <div>
-        <div class="equipe">William e Lucas</div>
-        <div class="indicadores">SLA: 0% • Retrabalho: 0 • OS: 0</div>
-      </div>
-      <div class="pontos">0 pts</div>
-    </div>
+<div class="item">
+  <div class="posicao">6º</div>
+  <div>
+    <div class="equipe">William e Lucas</div>
+    <div class="indicadores">SLA: 0% • Retrabalho: 0 • OS: 0</div>
+  </div>
+  <div class="pontos">0 pts</div>
+</div>
+```
 
   </div>
 
 </div>
+
+<script>
+  async function carregarTotalOS() {
+
+    const url =
+      "https://operacao.souuni.com/api/dashboard/filtered-breakdowns" +
+      "?calculation_run_id=508" +
+      "&regional=" + encodeURIComponent("UNI - ALTA FLORESTA DOESTE");
+
+    try {
+
+      const resposta = await fetch(url);
+
+      if (!resposta.ok) {
+        throw new Error("Erro HTTP " + resposta.status);
+      }
+
+      const dados = await resposta.json();
+
+      const regional = dados.cost_by_regional?.find(
+        item => item.regional === "UNI - ALTA FLORESTA DOESTE"
+      );
+
+      if (regional) {
+        document.getElementById("totalOS").textContent =
+          Number(regional.orders).toLocaleString("pt-BR");
+      } else {
+        document.getElementById("totalOS").textContent = "0";
+      }
+
+    } catch (erro) {
+
+      console.error("Erro ao carregar total de OS:", erro);
+
+      document.getElementById("totalOS").textContent = "Erro";
+
+    }
+  }
+
+  carregarTotalOS();
+</script>
 
 </body>
 </html>
